@@ -141,7 +141,7 @@
 <script>
     document.getElementById("generateMessage").addEventListener("click", function() {
         const categories = ["graphics", "gameplay", "sound", "system", "zorluk", "hikaye", "10"];
-        let message = "İnceleme:\n\n";
+        let message = "Detaylı İnceleme:\n\n";
 
         categories.forEach(category => {
             const options = document.querySelectorAll(`input[name="${category}"] + label`);
@@ -160,7 +160,7 @@
         });
 
         // Alt kısma site linki ekleniyor
-        message += "\nKaynak: onurepbaygun.vercel.app";
+        message += "\nKaynak: detaylinceleme.vercel.app";
 
         document.getElementById("resultMessage").style.display = "block";
         document.getElementById("resultMessage").innerText = message;
