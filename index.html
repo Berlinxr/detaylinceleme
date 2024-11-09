@@ -55,6 +55,7 @@
             width: 300px;
             font-size: 16px;
             color: #333;
+            white-space: pre-wrap;
         }
     </style>
 </head>
@@ -80,24 +81,29 @@
     <div class="option"><input type="radio" name="gameplay" id="oynanis5"><label for="oynanis5">Sadece oynama</label></div>
 </div>
 
-<!-- Diğer kategoriler için aynı yapıyı ekleyin -->
-
 <button id="generateMessage">İncelemeyi Göster</button>
 
 <div id="resultMessage" style="display: none;"></div>
 
 <script>
     document.getElementById("generateMessage").addEventListener("click", function() {
-        const categories = ["graphics", "gameplay"];  // Kategoriler eklenmeli
+        const categories = ["graphics", "gameplay"]; // Diğer kategoriler eklenmeli
         let message = "İnceleme:\n\n";
 
         categories.forEach(category => {
+            const options = document.querySelectorAll(`input[name="${category}"] + label`);
             const selectedOption = document.querySelector(`input[name="${category}"]:checked + label`);
-            if (selectedOption) {
-                message += `- ${selectedOption.parentNode.parentNode.querySelector("h3").innerText}: ${selectedOption.innerText}\n`;
-            } else {
-                message += `- ${category}: Seçilmedi\n`;
-            }
+            
+            message += `- ${options[0].parentNode.parentNode.querySelector("h3").innerText}:\n`;
+
+            options.forEach(option => {
+                if (selectedOption && selectedOption === option) {
+                    message += `  ✓ ${option.innerText}\n`;
+                } else {
+                    message += `    ${option.innerText}\n`;
+                }
+            });
+            message += "\n";
         });
 
         document.getElementById("resultMessage").style.display = "block";
