@@ -61,6 +61,9 @@
 </head>
 <body>
 
+  <h1>Steam oyun incelemesi yaratma</h1>  
+    <h3>Bu sitede oynadığınız oyunları detaylıca puanlayabilirsiniz. Formu doldurduktan sonra Mesajı kopyalayın be incelemeye yapıştırın. Bu kadar basit!n/Sitenin kodlarına <a href="">Github Sayfam</a> üzerinden ulaşabilirsin.</h3>
+
 <div class="category">
     <h3>Grafikler</h3>
     <div class="option"><input type="radio" name="graphics" id="grafik1"><label for="grafik1">Oyun değil gerçek</label></div>
@@ -137,7 +140,7 @@
 
 <script>
     document.getElementById("generateMessage").addEventListener("click", function() {
-        const categories = ["graphics", "gameplay"]; // Diğer kategoriler eklenmeli
+        const categories = ["graphics", "gameplay", "sound", "system", "zorluk", "hikaye", "10"];
         let message = "İnceleme:\n\n";
 
         categories.forEach(category => {
