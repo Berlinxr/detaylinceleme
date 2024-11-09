@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oyun İnceleme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .category {
+            margin: 20px 0;
+            padding: 10px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            width: 300px;
+            border-radius: 8px;
+        }
+        .category h3 {
+            margin-top: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+            cursor: pointer;
+        }
+        .option input[type="radio"] {
+            margin-right: 8px;
+        }
+        #generateMessage {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #resultMessage {
+            margin-top: 20px;
+            padding: 15px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 300px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="category">
+    <h3>Grafikler</h3>
+    <div class="option"><input type="radio" name="graphics" id="grafik1"><label for="grafik1">Oyun değil gerçek</label></div>
+    <div class="option"><input type="radio" name="graphics" id="grafik2"><label for="grafik2">Çok iyi</label></div>
+    <div class="option"><input type="radio" name="graphics" id="grafik3"><label for="grafik3">İyi</label></div>
+    <div class="option"><input type="radio" name="graphics" id="grafik4"><label for="grafik4">Ortalama</label></div>
+    <div class="option"><input type="radio" name="graphics" id="grafik5"><label for="grafik5">Kötü</label></div>
+    <div class="option"><input type="radio" name="graphics" id="grafik6"><label for="grafik6">Uzun süre bakmak göz bozar</label></div>
+    <div class="option"><input type="radio" name="graphics" id="grafik7"><label for="grafik7">Berbat</label></div>
+</div>
+
+<div class="category">
+    <h3>Oynanış</h3>
+    <div class="option"><input type="radio" name="gameplay" id="oynanis1"><label for="oynanis1">Mükemmel</label></div>
+    <div class="option"><input type="radio" name="gameplay" id="oynanis2"><label for="oynanis2">İyi</label></div>
+    <div class="option"><input type="radio" name="gameplay" id="oynanis3"><label for="oynanis3">Sadece oyun</label></div>
+    <div class="option"><input type="radio" name="gameplay" id="oynanis4"><label for="oynanis4">Yani</label></div>
+    <div class="option"><input type="radio" name="gameplay" id="oynanis5"><label for="oynanis5">Sadece oynama</label></div>
+</div>
+
+<!-- Diğer kategoriler için aynı yapıyı ekleyin -->
+
+<button id="generateMessage">İncelemeyi Göster</button>
+
+<div id="resultMessage" style="display: none;"></div>
+
+<script>
+    document.getElementById("generateMessage").addEventListener("click", function() {
+        const categories = ["graphics", "gameplay"];  // Kategoriler eklenmeli
+        let message = "İnceleme:\n\n";
+
+        categories.forEach(category => {
+            const selectedOption = document.querySelector(`input[name="${category}"]:checked + label`);
+            if (selectedOption) {
+                message += `- ${selectedOption.parentNode.parentNode.querySelector("h3").innerText}: ${selectedOption.innerText}\n`;
+            } else {
+                message += `- ${category}: Seçilmedi\n`;
+            }
+        });
+
+        document.getElementById("resultMessage").style.display = "block";
+        document.getElementById("resultMessage").innerText = message;
+    });
+</script>
+
+</body>
+</html>
