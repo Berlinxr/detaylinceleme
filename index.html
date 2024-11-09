@@ -73,6 +73,15 @@
 </div>
 
 <div class="category">
+    <h3>Seslendirme</h3>
+    <div class="option"><input type="radio" name="sound" id="ses1"><label for="ses1">Senfoni</label></div>
+    <div class="option"><input type="radio" name="sound" id="ses2"><label for="ses2">Çok iyi</label></div>
+    <div class="option"><input type="radio" name="sound" id="ses3"><label for="ses3">İyi</label></div>
+    <div class="option"><input type="radio" name="sound" id="ses4"><label for="ses4">Çokta kötü değil</label></div>
+    <div class="option"><input type="radio" name="sound" id="ses5"><label for="ses5">Kulaklarım kanıyor.</label></div>
+</div>
+
+<div class="category">
     <h3>Oynanış</h3>
     <div class="option"><input type="radio" name="gameplay" id="oynanis1"><label for="oynanis1">Mükemmel</label></div>
     <div class="option"><input type="radio" name="gameplay" id="oynanis2"><label for="oynanis2">İyi</label></div>
@@ -81,7 +90,48 @@
     <div class="option"><input type="radio" name="gameplay" id="oynanis5"><label for="oynanis5">Sadece oynama</label></div>
 </div>
 
-<button id="generateMessage">İncelemeyi Göster</button>
+<div class="category">
+    <h3>Sistem Gereksinimleri</h3>
+    <div class="option"><input type="radio" name="system" id="sistem1"><label for="sistem1">NASA Bilgisayarı</label></div>
+    <div class="option"><input type="radio" name="system" id="sistem5"><label for="sistem2">Sağlam bir makina lazım</label></div>
+    <div class="option"><input type="radio" name="system" id="sistem2"><label for="sistem3">Ortalama bir bilgisayar lazım</label></div>
+    <div class="option"><input type="radio" name="system" id="sistem3"><label for="sistem4">Kötü bi bilgisayar bile açar</label></div>
+    <div class="option"><input type="radio" name="system" id="sistem4"><label for="sistem5">Tost makinası</label></div>
+</div>
+
+<div class="category">
+    <h3>Zorluk</h3>
+    <div class="option"><input type="radio" name="zorluk" id="zor1"><label for="zor1">W'ye bas</label></div>
+    <div class="option"><input type="radio" name="zorluk" id="zor2"><label for="zor2">Kolay</label></div>
+    <div class="option"><input type="radio" name="zorluk" id="zor3"><label for="zor4">Ustalaşması zor</label></div>
+    <div class="option"><input type="radio" name="zorluk" id="zor4"><label for="zor4">Beyin gerektirir</label></div>
+    <div class="option"><input type="radio" name="zorluk" id="zor5"><label for="zor5">Zor</label></div>
+</div>
+
+<div class="category">
+    <h3>Hikaye</h3>
+    <div class="option"><input type="radio" name="hikaye" id="h1"><label for="h1">2. Hayatın olabilir</label></div>
+    <div class="option"><input type="radio" name="hikaye" id="h2"><label for="h2">İyi</label></div>
+    <div class="option"><input type="radio" name="hikaye" id="h3"><label for="h3">Ortalama</label></div>
+    <div class="option"><input type="radio" name="hikaye" id="h4"><label for="h4">Hafif</label></div>
+    <div class="option"><input type="radio" name="hikaye" id="h5"><label for="h5">Hikayesiz</label></div>
+</div>
+
+<div class="category">
+    <h3>0 / 10?</h3>
+    <div class="option"><input type="radio" name="10" id="p1"><label for="p1">1</label></div>
+    <div class="option"><input type="radio" name="10" id="p2"><label for="p2">2</label></div>
+    <div class="option"><input type="radio" name="10" id="p3"><label for="p3">3</label></div>
+    <div class="option"><input type="radio" name="10" id="p4"><label for="p4">4</label></div>
+    <div class="option"><input type="radio" name="10" id="p5"><label for="p5">5</label></div>
+    <div class="option"><input type="radio" name="10" id="p6"><label for="p6">6</label></div>
+    <div class="option"><input type="radio" name="10" id="p7"><label for="p7">4</label></div>
+    <div class="option"><input type="radio" name="10" id="p8"><label for="p8">8</label></div>
+    <div class="option"><input type="radio" name="10" id="p9"><label for="p9">9</label></div>
+    <div class="option"><input type="radio" name="10" id="p10"><label for="p10">10</label></div>
+</div>
+
+<button id="generateMessage">Mesajı Göster</button>
 
 <div id="resultMessage" style="display: none;"></div>
 
@@ -105,6 +155,9 @@
             });
             message += "\n";
         });
+
+        // Alt kısma site linki ekleniyor
+        message += "\nKaynak: onurepbaygun.vercel.app";
 
         document.getElementById("resultMessage").style.display = "block";
         document.getElementById("resultMessage").innerText = message;
