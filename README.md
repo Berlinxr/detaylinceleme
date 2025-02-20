@@ -8,4 +8,4 @@ detaylinceleme.vercel.app, oyunlar hakkında detaylı analizler ve kullanıcı i
 
 Bu platform, Steam üzerinden oyun sayfalarında da kullanılabilir. Steam’de gezinirken oyunların incelemelerini ve istatistiklerini daha detaylı görmek için entegre edilebilir. Açık kaynak kodlu yapısı sayesinde katkıda bulunabilir veya kendi ihtiyaçlarınıza göre geliştirebilirsiniz.
 
-###detaylinceleme by onur epbaygun
+### detaylinceleme by onur epbaygun
