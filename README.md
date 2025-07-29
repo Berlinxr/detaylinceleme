@@ -1,5 +1,5 @@
 ![x](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjdqaXFlcWs1OXI0NzRkcTNpd3Jvd3I1b3dwbDZuNGRxYWl0enhnOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/67mga1yzFhROUIsCDr/giphy.gif)
-[Lisans](https://fxcompany.vercel.app/lisans.html)
+[Lisans](https://berlinxr.cfd/lisans.html)
 # Detaylı İnceleme
 
 detaylinceleme, oyunlar hakkında detaylı analizler ve kullanıcı incelemelerini bir araya getirerek kapsamlı bilgiler sunar. Bu platform, oyun satın almadan önce karar vermenizi kolaylaştırmak için detaylı grafikler, puanlar ve yorumlar sağlar. Kullanıcı dostu arayüzüyle hızlıca aradığınız oyunun derinlemesine incelemesine ulaşabilirsiniz.
